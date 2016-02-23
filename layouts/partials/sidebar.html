@@ -1,0 +1,45 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p align="center">&middot; <a href="http://ioos.github.io/" target="_blank">IOOS GitHub Pages</a> &middot; <br>
+	a collection of IOOS documentation and software</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item {{ if eq .Url "/" }} active {{ end }}" href="/">Home</a>
+<!--
+    <a class="sidebar-nav-item {{ if eq .Url "post" }} active {{ end }}" href="/post">Posts</a>
+-->
+
+  <div class="sidebar-item">
+    <p>Documents</p>
+  </div>
+
+<p style="text-align:right"> 
+    {{ $thisperma := .Permalink }}
+    {{ range .Site.Recent.ByWeight }}
+      {{ if isset .Params "sidebar" }}
+        <a class="sidebar-nav-item-list {{ if eq .Permalink $thisperma }} active {{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ end }}
+    {{ end }}
+</p>
+<p style="text-align:right">
+      {{ range .Site.Menus.extramedia }}
+        <a class="sidebar-nav-item-list" href="{{ .Url }}"> {{ .Name }}</a>
+      {{end}}
+</p>
+
+    <a class="sidebar-nav-item" href="{{ .Site.Params.Github.Url }}">GitHub repository <br> (currently on '{{ .Site.Params.Github.Head }}')</a>
+    <a class="sidebar-nav-item" href="{{ .Site.Params.Github.Url }}/archive/{{ .Site.Params.Github.Head }}.zip">Download repository</a>
+<!--    <span class="sidebar-nav-item" >(currently on '{{ .Site.Params.Github.Head }}')</span> -->
+
+	</nav>
+
+  <div class="sidebar-item">
+    <span>&copy; {{ .Site.LastChange.Year }} U.S. IOOS. Rights reserved</span>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+baseurl = "http://abirger.github.io/animal-telemetry"
+CanonifyUrls = true
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+languageCode = "en-us"
+[params]
+  Title = "Strategic Plan & Recommendations for ATN"
+  Tagline = "Meeting Nation's Needs for Biological and Environmental Monitoring"
+[params.Github]
+  Head = "master"
+  Url = "https://github.com/ioos/animal-telemetry"
+[[menu.extramedia]]
+    name = "Webinar: IOOS Biological Data Enrollment Process (video)"
+    url = "https://mmancusa.webex.com/mmancusa/ldr.php?RCID=a08a97a20c0328828c0bc2f4e07f0fa2"
+    weight = -110
+    identifier = "about"
+[[menu.extramedia]]
+    name = "bla-bla-video"
+    weight = -200
+
+	
+ 
