@@ -10,9 +10,9 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item {{ if eq .Url "/" }} active {{ end }}" href="/">Home</a>
+    <a class="sidebar-nav-item {{ if eq .URL "/" }} active {{ end }}" href="/">Home</a>
 <!--
-    <a class="sidebar-nav-item {{ if eq .Url "post" }} active {{ end }}" href="/post">Posts</a>
+    <a class="sidebar-nav-item {{ if eq .URL "post" }} active {{ end }}" href="/post">Posts</a>
 -->
 
   <div class="sidebar-item">
@@ -21,7 +21,7 @@
 
 <p style="text-align:right"> 
     {{ $thisperma := .Permalink }}
-    {{ range .Site.Recent.ByWeight }}
+    {{ range .Site.Pages.ByWeight }}
       {{ if isset .Params "sidebar" }}
         <a class="sidebar-nav-item-list {{ if eq .Permalink $thisperma }} active {{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
       {{ end }}
@@ -29,7 +29,7 @@
 </p>
 <p style="text-align:right">
       {{ range .Site.Menus.extramedia }}
-        <a class="sidebar-nav-item-list" href="{{ .Url }}"> {{ .Name }}</a>
+        <a class="sidebar-nav-item-list" href="{{ .URL }}"> {{ .Name }}</a>
       {{end}}
 </p>
 
