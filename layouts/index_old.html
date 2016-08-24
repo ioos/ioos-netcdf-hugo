@@ -1,0 +1,42 @@
+{{ partial "default_head.html" . }}
+
+  <div class="content container">
+	<div class="posts">
+      <div class="post">
+
+<!-- A content of a single markdown file is rendered as a Home page, if it has 'URL = index.html' in the front matter, -->
+<!-- otherwise it is a summary of the same file -->
+<!--
+ 	    {{ range first 1 .Data.Pages }}
+           <h1><a href='{{ .Permalink }}'>{{ .Title }}</a> </h1>
+        	{{ if eq .RelPermalink "/index.html" }} 
+				{{ .Content }}
+			{{else}}
+				{{ .Summary }} 
+				<footer>
+					<a href='{{ .Permalink }}'><nobr><i>Read more ></i></nobr></a>
+				</footer>
+			{{end}}
+		{{ end }}
+-->
+
+<!-- A content of a single markdown file is rendered as a Home page, if it has 'URL = index.html' in the front matter, -->
+<!-- otherwise the Home page is a collection of summaries of all documents -->                                      
+<!--
+ 	    {{ range .Data.Pages }}
+           <h2><a href='{{ .Permalink }}'>{{ .Title }}</a> </h2>
+        	{{ if eq .RelPermalink "/index.html" }} 
+				{{ .Content }}
+			{{else}}
+				{{ .Summary }} 
+				<footer>
+					<a href='{{ .Permalink }}'><nobr><i>Read more ></i></nobr></a>
+				</footer>
+			{{end}}
+		{{ end }}
+-->
+ 	  </div>
+    </div>
+  </div>
+
+{{ partial "default_foot.html" . }}

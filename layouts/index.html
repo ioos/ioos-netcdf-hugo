@@ -3,13 +3,10 @@
   <div class="content container">
 	<div class="posts">
       <div class="post">
-
-<!-- A content of a single markdown file is rendered as a Home page, if it has 'URL = index.html' in the front matter, -->
-<!-- otherwise it is a summary of the same file -->
 <!--
  	    {{ range first 1 .Data.Pages }}
-           <h1><a href='{{ .Permalink }}'>{{ .Title }}</a> </h1>
-        	{{ if eq .RelPermalink "/index.html" }} 
+           <h2><a href='{{ .Permalink }}'>{{ .Title }}</a> </h2>
+        	{{ if eq .RelPermalink "/animal-telemetry/index.html" }} 
 				{{ .Content }}
 			{{else}}
 				{{ .Summary }} 
@@ -19,22 +16,44 @@
 			{{end}}
 		{{ end }}
 -->
-
-<!-- A content of a single markdown file is rendered as a Home page, if it has 'URL = index.html' in the front matter, -->
-<!-- otherwise the Home page is a collection of summaries of all documents -->                                      
+ 	    {{ range .Data.Pages }}
+           <h2><a href='{{ .Permalink }}'>{{ .Title }}</a> </h2>
+        	{{ if eq .RelPermalink "/conventions-for-observing-asset-identifiers/index.html" }} 
+				{{ .Content }}
+				<footer>
+					<a href='./ioos_assets_wiki_init_v0_1/'><nobr><i>Read more ></i></nobr></a>
+				</footer>
+			{{else}}
+				{{ .Summary }} 
+				{{ if .Truncated }}
+					<footer>
+						<a href='{{ .Permalink }}'><nobr><i>Read more ></i></nobr></a>
+					</footer>
+				{{end}}
+			{{end}}
+		{{ end }}
 <!--
  	    {{ range .Data.Pages }}
            <h2><a href='{{ .Permalink }}'>{{ .Title }}</a> </h2>
-        	{{ if eq .RelPermalink "/index.html" }} 
+        	{{ if eq .RelPermalink "/animal-telemetry/index.html" }} 
 				{{ .Content }}
-			{{else}}
-				{{ .Summary }} 
 				<footer>
-					<a href='{{ .Permalink }}'><nobr><i>Read more ></i></nobr></a>
+					<a href='./animal-telemetry/'><nobr><i>Read more ></i></nobr></a>
 				</footer>
 			{{end}}
 		{{ end }}
 -->
+<!--
+ 	    {{ range .Data.Pages }}
+           <h2><a href='{{ .Permalink }}'>{{ .Title }}</a> </h2>
+        	{{ if eq .RelPermalink "/animal-telemetry/index.html" }} 
+				{{ .Summary }} 
+				<footer>
+					<a href='./animal-telemetry/'><nobr><i>Read more ></i></nobr></a>
+				</footer>
+			{{end}}
+		{{ end }}
+-->		
  	  </div>
     </div>
   </div>
