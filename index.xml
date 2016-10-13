@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> </title>
-    <link>http://ioos.github.io/ioos-netcdf/</link>
+    <link>https://ioos.github.io/ioos-netcdf/</link>
     <language>en-us</language>
     <author></author>
     <rights>(C) 2014</rights>
@@ -12,10 +12,10 @@
       
         <item>
           <title>ABOUT: IOOS NetCDF</title>
-          <link>http://ioos.github.io/ioos-netcdf/about/</link>
+          <link>https://ioos.github.io/ioos-netcdf/about/</link>
           <pubDate>Mon, 04 Aug 2014 07:56:39 UTC</pubDate>
           <author></author>
-          <guid>http://ioos.github.io/ioos-netcdf/about/</guid>
+          <guid>https://ioos.github.io/ioos-netcdf/about/</guid>
           <description>&lt;p&gt;&lt;em&gt;This repository provides guidelines, links and examples to help the IOOS community to use netCDF and related related technologies like ncSOS, ncISO, OPeNDAP, THREDDS, ERDDAP, etc. to achieve interoperability. Additionally, this repository may provide examples of good data files, guidance for configuring servers, etc.&lt;/em&gt;&lt;/p&gt;
 </description>
         </item>
@@ -24,10 +24,10 @@
       
         <item>
           <title>IOOS Metadata Profile for NetCDF, Version 1.0</title>
-          <link>http://ioos.github.io/ioos-netcdf/ioos-netcdf-metadata-description/</link>
+          <link>https://ioos.github.io/ioos-netcdf/ioos-netcdf-metadata-description/</link>
           <pubDate>Fri, 21 Oct 2016 07:56:39 UTC</pubDate>
           <author></author>
-          <guid>http://ioos.github.io/ioos-netcdf/ioos-netcdf-metadata-description/</guid>
+          <guid>https://ioos.github.io/ioos-netcdf/ioos-netcdf-metadata-description/</guid>
           <description>
 
 &lt;p&gt;&lt;em&gt;This page provides description of the IOOS NetCDF Metadata Profile that IOOS Program Office has developed for distribution of the IOOS data using THREDDS or ERDDAP servers. The use of the Profile is strongly recommended to all IOOS Data Providers, including RAs and various DACs.&lt;/em&gt;&lt;/p&gt;
