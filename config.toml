@@ -1,20 +1,16 @@
-baseurl = "http://ioos.github.io/[repository-name]"
+baseurl = "http://ioos.github.io/ioos-netcdf"
 CanonifyUrls = true
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
 languageCode = "en-us"
 [params]
-  Title = "bla-bla-bla"
-  Tagline = "yada-yada-yada"
+  Title = "IOOS NetCDF"
+  Tagline = "Collection of documents, templates and other artifacts"
 [params.Github]
   Head = "master"
-  Url = "https://github.com/ioos/[repository-name]"
-[[menu.extramedia]]
-    name = "bla-bla-video"
-    url = "bla-bla-video-url"
-    weight = -100
-    identifier = "yada-yada-about-video"
+  Url = "https://github.com/ioos/ioos-netcdf"
+
 
 	
  

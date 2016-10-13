@@ -3,14 +3,11 @@ weight = "0"
 type = "post"
 draft = false
 sidebar = true
-Title = "ABOUT: Whatever It Is About"
+Title = "ABOUT: IOOS NetCDF"
 date = 2014-08-04T07:56:39Z
-url = "index.html"
+
 +++
 
-<!-- For a single homepage put in FrontMatter url = "index.html"; for a summary of multiple documents on one page do not put url parameter there at all -->
 
-<!-- PUT SUMMARY CONTENT HERE BEFORE "MORE" COMMENT-->
+*This repository provides guidelines, links and examples to help the IOOS community to use netCDF and related related technologies like ncSOS, ncISO, OPeNDAP, THREDDS, ERDDAP, etc. to achieve interoperability. Additionally, this repository may provide examples of good data files, guidance for configuring servers, etc.*
 <!--more-->
-
-<!-- ADDITIONAL CONTENT MAY BE PLACED AFTER "MORE" FOR A SINGLE PAGE -->
