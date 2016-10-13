@@ -1,4 +1,4 @@
-baseurl = "http://ioos.github.io/ioos-netcdf"
+baseurl = "https://ioos.github.io/ioos-netcdf"
 CanonifyUrls = true
 contentdir = "content"
 layoutdir = "layouts"
