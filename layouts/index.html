@@ -18,18 +18,16 @@
 -->
  	    {{ range .Data.Pages }}
            <h2><a href='{{ .Permalink }}'>{{ .Title }}</a> </h2>
-        	{{ if eq .RelPermalink "/conventions-for-observing-asset-identifiers/index.html" }} 
+        	{{ if eq .RelPermalink "/animal-telemetry/index.html" }} 
 				{{ .Content }}
 				<footer>
-					<a href='./ioos_assets_wiki_init_v0_1/'><nobr><i>Read more ></i></nobr></a>
+					<a href='./animal-telemetry-plan/'><nobr><i>Read more ></i></nobr></a>
 				</footer>
 			{{else}}
 				{{ .Summary }} 
-				{{ if .Truncated }}
-					<footer>
-						<a href='{{ .Permalink }}'><nobr><i>Read more ></i></nobr></a>
-					</footer>
-				{{end}}
+				<footer>
+					<a href='{{ .Permalink }}'><nobr><i>Read more ></i></nobr></a>
+				</footer>
 			{{end}}
 		{{ end }}
 <!--
