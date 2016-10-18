@@ -116,17 +116,20 @@
 
 <ul>
 <li><a href="http://www.nodc.noaa.gov/data/formats/netcdf/v1.1/"><strong>NOAA NODC NetCDF Templates v1.1</strong></a> and <a href="http://www.nodc.noaa.gov/data/formats/netcdf/"><strong>NOAA NCEI NetCDF Templates v2.0</strong></a>.</li>
-<li><a href="http://cf-pcmdi.llnl.gov/documents/cf-conventions/1.6/cf-conventions.html"><strong>Climate and Forecast (CF) Conventions v1.6</strong></a></li>
-<li><a href="http://wiki.esipfed.org/index.php?title=Category:Attribute_Conventions_Dataset_Discovery"><strong>Attribute Conventions for Dataset Discovery (ACDD)</strong></a>. The IOOS Profile recommends to use the <a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-1"><strong>ACDD v1.1</strong></a>; however, some attributes are distilled from the <a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3"><strong>ACDD v1.3</strong></a> as far as they belong to the NCEI Templates.</li>
+<li><a href="http://cf-pcmdi.llnl.gov/documents/cf-conventions/1.6/cf-conventions.html"><strong>Climate and Forecast (CF) Conventions v1.6</strong></a>.</li>
+<li><a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-1"><strong>Attribute Conventions for Dataset Discovery (ACDD) v1.1</strong></a> and <a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3"><strong>ACDD v1.3</strong></a>.</li>
 </ul>
 
 <h1 id="caveats:4c928e7400a539f5a864aceae8c6402b">Caveats</h1>
 
 <ol>
+<li><a href="http://www.nodc.noaa.gov/data/formats/netcdf/v1.1/"><strong>NOAA NODC NetCDF Templates v1.1</strong></a> is required; the <a href="http://www.nodc.noaa.gov/data/formats/netcdf/"><strong>NOAA NCEI NetCDF Templates v2.0</strong></a> is not recommended at the moment.</li>
+<li><a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-1"><strong>Attribute Conventions for Dataset Discovery (ACDD) v1.1</strong></a> is required. The <a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3"><strong>ACDD v1.3</strong></a> is not recommended at the moment, except for the <strong><code>platform_vocabulary</code></strong> attribute.<br /></li>
 <li>Each attribute in the Profile is either <strong>required</strong> or <strong>recommended</strong>.</li>
 <li>All <strong>required</strong> attributes must have meaningful values assigned to them in accordance with the rules prescribed by the corresponding Convention or Template.</li>
 <li>Each and all of the <strong>recommended</strong> attributes may be omitted; however, it is highly desirable that these attributes are included into the NetcDF metadata <strong><em>AND</em></strong> have meaningful values assigned to them.</li>
 <li>The <strong><code>platform_variable:ioos_code</code></strong> and <strong><code>platform_variable:short_name</code></strong> are the only <strong>interchangeable</strong> attributes - either a single <strong><code>platform_variable:ioos_code</code></strong> or a combination of <strong><code>platform_variable:short_name</code></strong> with <strong><code>naming_authority</code></strong> is <strong>required</strong> to ensure that ncSOS will be able to produce the IOOS SOS Asset Identifier for the specific platform (see the <a href="https://github.com/ioos/ioos-netcdf/blob/master/docs/NetCDF-to-SOS%20Mappings_clean_2016-04-07a.xlsx">NetCDF to IOOS SOS Crosswalk</a> for details). The rest of attributes <strong><em>may not</em></strong> be substituted for one another.</li>
+<li>The <strong><code>platform_vocabulary</code></strong> attribute is at the moment the only pure ACDD v1.3 attribute that is included in the Profile.</li>
 <li>This document only describes a fraction of the Profile:
 
 <ul>
@@ -134,7 +137,7 @@
 <li>attributes with a different role in the Templates; for example, the attribute <strong><code>_FillValue</code></strong> is required by the NODC Template; however, the Profile just recommends to use it because it is optional in the IOOS SOS metadata set (whether the Template requirement should prevail, is beyond the scope of the Profile description);</li>
 <li>attributes that are <strong>required</strong> by the Profile regardless of their role in the Templates.</li>
 </ul></li>
-<li>Other Profile attributes are described in the <a href="http://www.nodc.noaa.gov/data/formats/netcdf/v1.1/"><strong>NOAA NODC NetCDF Templates v1.1</strong></a> and <a href="http://www.nodc.noaa.gov/data/formats/netcdf/"><strong>NOAA NCEI NetCDF Templates v2.0</strong></a> .  A set of &ldquo;Gold Standard&rdquo; example NetCDF files, which precisely follow the NODC/NCEI Templates, may be found <a href="http://data.nodc.noaa.gov/ncei/example/data/netcdf/">here</a> or <a href="http://data.nodc.noaa.gov/thredds/catalog/example/catalog.html">here</a>.</li>
+<li>Other Profile attributes are described in the <a href="http://www.nodc.noaa.gov/data/formats/netcdf/v1.1/"><strong>NOAA NODC NetCDF Templates v1.1</strong></a>.  A set of &ldquo;Gold Standard&rdquo; example NetCDF files, which precisely follow the NODC/NCEI Templates, may be found <a href="http://data.nodc.noaa.gov/ncei/example/data/netcdf/">here</a> or <a href="http://data.nodc.noaa.gov/thredds/catalog/example/catalog.html">here</a>.</li>
 <li>The <a href="https://gliders.ioos.us/index.html"><strong>U.S. IOOS National Glider Data Assembly Center</strong></a> currently uses a slightly different <a href="https://github.com/ioos/ioosngdac/wiki/NGDAC-NetCDF-File-Format-Version-2">NetCDF Metadata Profile</a>; work is in progress to harmonize the NGDAC and IOOS NetCDF Profiles.</li>
 </ol>
 
@@ -322,8 +325,8 @@
 
 <tr>
 <td align="left">platform</td>
-<td align="center">ACDD (1.3)</td>
-<td align="left">Name of the platform(s) that supported the sensor data used to create this data set or product. Platforms can be of any type, including satellite, ship, station, aircraft or other. The controlled vocabulary must be indicate in <strong><code>platform_vocabulary</code></strong> (see example there).</td>
+<td align="center">NODC Templates<br>(ACDD 1.3)</td>
+<td align="left">Name of the platform(s) that supported the sensor data used to create this data set or product. Platforms can be of any type, including satellite, ship, station, aircraft or other. The controlled vocabulary must be indicate in <strong><code>platform_vocabulary</code></strong> (see example there).<br>The value of the attribute should be set to another variable which contains the details of the platform. There can be multiple platforms involved depending on if all the instances of the featureType in the collection share the same platform or not. If multiple platforms are involved, a variable should be defined for each platform and referenced from the geophysical variable in a <b>space</b> separated string.</td>
 <td align="center">global</td>
 <td align="center">required</td>
 </tr>
@@ -357,13 +360,13 @@
 <td align="center">IOOS</td>
 <td align="left">In  conjunction with a <strong><code>platform_vocabulary</code></strong> attribute, identifies platform&rsquo;s type as defined in the <a href="https://mmisw.org/orr/#http://mmisw.org/ont/ioos/platform">IOOS Platform Categories vocabulary</a>, or <a href="http://vocab.nerc.ac.uk/collection/L06/current/">SeaVoX Platform Categories vocabulary</a>, or any other vocabulary. The URL of the actual vocabulary must be published in the <strong><code>platform_vocabulary</code></strong> global attribute. <br><br>Alternatively, the <strong><code>platform</code></strong> and <strong><code>platform_vocabulary</code></strong> pair of attributes may be used; however, this option is not recommended (see details in the <strong><code>platform_vocabulary</code></strong> description.)</td>
 <td align="center">variable</td>
-<td align="center">required*</td>
+<td align="center">required</td>
 </tr>
 
 <tr>
 <td align="left">platform_vocabulary</td>
-<td align="center">ACDD (1.3)</td>
-<td align="left">Controlled vocabulary for the names used in the &ldquo;platform&rdquo; attribute.<br><br> It is recommended that this attribute is used in conjunction with the <strong><code>platform_variable:type</code></strong> attribute. In that case, the recommended value for the <strong><code>platform_vocabulary</code></strong> attribute is a URL to either the <a href="https://mmisw.org/orr/#http://mmisw.org/ont/ioos/platform">IOOS Platform Category vocabulary</a>, or <a href="http://vocab.nerc.ac.uk/collection/L06/current/">SeaVoX Platform Categories vocabulary</a>. <br><br>As an alternative (although not recommended), a NetCDF file may follow the NCEI Template v2.0, which suggests the use of &ldquo;NASA GCMD Platform Keywords Version 8.1&rdquo; string as the fixed value for the <strong><code>platform_vocabulary</code></strong>, and does not stipulate for the <strong><code>platform_variable:type</code></strong>. Instead, the actual type of the platform must be placed in the global <strong><code>platform</code></strong> attribute as described in the Science Keyword Rules (<a href="http://gcmd.nasa.gov/learn/rules.html">http://gcmd.nasa.gov/learn/rules.html</a>) for NASA Global Change Master Directory (GCMD) Keywords (<a href="http://gcmd.nasa.gov/learn/keywords.html">http://gcmd.nasa.gov/learn/keywords.html</a>). <br><br>Example: <strong><code>platform: In Situ Ocean-based Platforms &gt; MOORINGS</code></strong></td>
+<td align="center">ACDD 1.3<br>(NCEI Templates v2.0)</td>
+<td align="left">Controlled vocabulary for the names used in the &ldquo;platform&rdquo; attribute.<br><br> It is recommended that this attribute is used in conjunction with the <strong><code>platform_variable:type</code></strong> attribute. In that case, the recommended value for the <strong><code>platform_vocabulary</code></strong> attribute is a URL to either the <a href="https://mmisw.org/orr/#http://mmisw.org/ont/ioos/platform">IOOS Platform Category vocabulary</a>, or <a href="http://vocab.nerc.ac.uk/collection/L06/current/">SeaVoX Platform Categories vocabulary</a>. <br><br>Example: <strong><code>platform_vocabulary = &quot;https://mmisw.org/orr/#http://mmisw.org/ont/ioos/platform&quot;</code></strong><br><br>As an alternative (although not recommended), a NetCDF file may follow the NCEI Template v2.0, which suggests the use of &ldquo;NASA GCMD Platform Keywords Version 8.1&rdquo; string as the fixed value for the <strong><code>platform_vocabulary</code></strong>, and does not stipulate for the <strong><code>platform_variable:type</code></strong>. Instead, the actual type of the platform must be placed in the global <strong><code>platform</code></strong> attribute as described in the Science Keyword Rules (<a href="http://gcmd.nasa.gov/learn/rules.html">http://gcmd.nasa.gov/learn/rules.html</a>) for NASA Global Change Master Directory (GCMD) Keywords (<a href="http://gcmd.nasa.gov/learn/keywords.html">http://gcmd.nasa.gov/learn/keywords.html</a>). <br><br>Example: <strong><code>platform: In Situ Ocean-based Platforms &gt; MOORINGS</code></strong></td>
 <td align="center">global</td>
 <td align="center">required</td>
 </tr>
