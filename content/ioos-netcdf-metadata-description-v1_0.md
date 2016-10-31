@@ -1,17 +1,18 @@
 +++
-weight = "10"
+weight = "90"
 type = "post"
 draft = false
 sidebar = false
 date = 2016-10-21T07:56:39Z
 title = "IOOS Metadata Profile for NetCDF, Version 1.0"
+description = "DEPRECATED VERSION"
 
 +++
 
 
 
 
-*This page provides description of the IOOS NetCDF Metadata Profile that IOOS Program Office has developed for distribution of the IOOS data using THREDDS or ERDDAP servers. The use of the Profile is strongly recommended to all IOOS Data Providers, including RAs and various DACs.*
+_This page provides description of the **deprecated** IOOS NetCDF Metadata Profile._
 <!--more-->
 
 
