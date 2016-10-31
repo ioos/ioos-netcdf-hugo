@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile"> 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>
+    
+      IOOS Metadata Profile for NetCDF, Version 1.1 &middot; IOOS NetCDF
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="https://ioos.github.io/ioos-netcdf/css/poole.css">
+  <link rel="stylesheet" href="https://ioos.github.io/ioos-netcdf/css/syntax.css">
+  <link rel="stylesheet" href="https://ioos.github.io/ioos-netcdf/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ioos.github.io/ioos-netcdf/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://ioos.github.io/ioos-netcdf/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ioos.github.io/ioos-netcdf/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p align="center">&middot; <a href="http://ioos.github.io/" target="_blank">IOOS GitHub Pages</a> &middot; <br>
+	a collection of IOOS documentation and software</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="https://ioos.github.io/ioos-netcdf/">Home</a>
+
+
+  <div class="sidebar-item">
+    <p>Documents</p>
+  </div>
+
+<p style="text-align:right"> 
+    
+    
+      
+        <a class="sidebar-nav-item-list " href="https://ioos.github.io/ioos-netcdf/about/">ABOUT: IOOS NetCDF</a>
+      
+    
+      
+        <a class="sidebar-nav-item-list  active " href="https://ioos.github.io/ioos-netcdf/ioos-netcdf-metadata-description-v1_1/">IOOS Metadata Profile for NetCDF, Version 1.1</a>
+      
+    
+      
+        <a class="sidebar-nav-item-list " href="https://ioos.github.io/ioos-netcdf/ioos-netcdf-metadata-description-v1_0/">IOOS Metadata Profile for NetCDF, Version 1.0</a>
+      
+    
+</p>
+<p style="text-align:right">
+      
+</p>
+
+    <a class="sidebar-nav-item" href="https://github.com/ioos/ioos-netcdf">GitHub repository <br> (currently on 'master')</a>
+    <a class="sidebar-nav-item" href="https://github.com/ioos/ioos-netcdf/archive/master.zip">Download repository</a>
+
+
+	</nav>
+
+  <div class="sidebar-item">
+    <span>&copy; 2014 U.S. IOOS. Rights reserved</span>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h2 class="masthead-title">
+		  <a href="https://ioos.github.io/ioos-netcdf/" title="Home"> IOOS NetCDF &middot; 
+		  <small>Collection of documents, templates and other artifacts</small>
+		  <img src="https://ioos.github.io/ioos-netcdf/images/ioos_blue2.png" alt="Smiley face" align="right" /></a>
+		  </h2>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">IOOS Metadata Profile for NetCDF, Version 1.1</h1>
+    <div id="toc" class="well col-md-4 col-sm-6">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#revision-history:05a39d16c30fe070d4347ebd8b2f36c4">Revision History</a></li>
+<li><a href="#scope:05a39d16c30fe070d4347ebd8b2f36c4">Scope</a></li>
+<li><a href="#caveats:05a39d16c30fe070d4347ebd8b2f36c4">Caveats</a></li>
+<li><a href="#ioos-netcdf-metadata-profile-attributes:05a39d16c30fe070d4347ebd8b2f36c4">IOOS NetCDF Metadata Profile Attributes</a></li>
+</ul>
+</nav>
+    </div>
+  
+
+<p><em>This page provides description of the <strong>current valid</strong> IOOS NetCDF Metadata Profile that IOOS Program Office has developed for distribution of the IOOS data using THREDDS or ERDDAP servers. The use of the Profile is strongly recommended to all IOOS Data Providers, including RAs and various DACs.</em></p>
+
+<h1 id="revision-history:05a39d16c30fe070d4347ebd8b2f36c4">Revision History</h1>
+
+<table>
+<thead>
+<tr>
+<th align="left">Version</th>
+<th align="left">Description</th>
+<th align="left">Date</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">1.0</td>
+<td align="left"><a href="../ioos-netcdf-metadata-description-v1_0/">Initial version based on the NODC Templates 1.1 and ACDD 1.1</a></td>
+<td align="left">2016-10-01</td>
+</tr>
+
+<tr>
+<td align="left">1.1</td>
+<td align="left">Updated version based on the NCEI Templates 2.0 and ACDD 1.3</td>
+<td align="left">2016-11-01</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="scope:05a39d16c30fe070d4347ebd8b2f36c4">Scope</h1>
+
+<p>The Profile defines the bare minimal set of attributes for IOOS Data Providers to include in their NetCDF data files. The Profile allows the NetCDF metadata to overlap with the IOOS SOS metadata in order to ensure a comprehensive cross-walk from NetCDF to IOOS SOS representation via the ncSOS service.</p>
+
+<p>While matching the IOOS SOS metadata, the Profile allows the lowest achievable divergence of the IOOS NetCDF files from the NODC/NCEI NetCDF Templates - the Profile includes the Templates&rsquo; attributes and augment them with a small number of IOOS-specific attributes just to ensure that NetCDF files inherently contain metadata required for the IOOS SOS output in cases when the NODC/NCEI Templates come short.</p>
+
+<p>In general, a Data Provider may use any metadata attributes in the NetCDF file; however, apart from the IOOS-specific portion, the IOOS Profile highly recommends to restrict the variety to the attributes and values provided by the following Conventions and Templates:</p>
+
+<ul>
+<li><a href="http://www.nodc.noaa.gov/data/formats/netcdf/"><strong>NOAA NCEI NetCDF Templates v2.0</strong></a>.</li>
+<li><a href="http://cf-pcmdi.llnl.gov/documents/cf-conventions/1.6/cf-conventions.html"><strong>Climate and Forecast (CF) Conventions v1.6</strong></a>.</li>
+<li><a href="http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3"><strong>ACDD v1.3</strong></a>.</li>
+</ul>
+
+<h1 id="caveats:05a39d16c30fe070d4347ebd8b2f36c4">Caveats</h1>
+
+<!--
+Although the IOOS Program Office **strongly discourages** from following the [**NOAA NODC NetCDF Templates v1.1**](http://www.nodc.noaa.gov/data/formats/netcdf/v1.1/) and [**Attribute Conventions for Dataset Discovery (ACDD) v1.1**](http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-1), the IOOS Program Office recognizes that certain Data Providers may have a substantial volume of NetCDF files based on them; therefore, such files would still be admissible until the Data Provider adopts the recommended versions. 
+-->
+
+<ol>
+<li><p>This document encompasses only a fraction of the whole IOOS NetCDF Metadata Profile:</p>
+
+<ul>
+<li>attributes that are IOOS-specific;</li>
+<li>attributes with a different role in the Templates; for example, the attribute <strong><code>_FillValue</code></strong> is required by the NODC Template; however, the Profile just recommends to use it because it is optional in the IOOS SOS metadata set (whether the Template requirement should prevail, is beyond the scope of the Profile description);</li>
+<li>attributes that are <strong>required</strong> by the Profile regardless of their role in the Templates.</li>
+</ul>
+
+<p>The rest of the Profile tallies with the <a href="http://www.nodc.noaa.gov/data/formats/netcdf/"><strong>NOAA NCEI NetCDF Templates v2.0</strong></a>.  A set of &ldquo;Gold Standard&rdquo; example NetCDF files, which precisely follow the NCEI Templates, may be found <a href="http://data.nodc.noaa.gov/ncei/example/data/netcdf/">here</a> or <a href="http://data.nodc.noaa.gov/thredds/catalog/example/catalog.html">here</a>.</p></li>
+
+<li><p>From the Profile perspective, the attributes can be either <strong>required</strong> or <strong>recommended</strong> / <strong>suggested</strong>:</p>
+
+<ul>
+<li>all <strong>required</strong> attributes must have meaningful values assigned to them in accordance with the rules prescribed by the corresponding Convention or Template.</li>
+<li>each and all of the <strong>recommended</strong> and <strong>suggested</strong> attributes may be omitted; however, it is highly desirable that these attributes are included into the NetcDF metadata <strong><em>AND</em></strong> have meaningful values assigned to them.</li>
+</ul></li>
+
+<li><p>The <strong><code>platform_variable:ioos_code</code></strong> and <strong><code>platform_variable:short_name</code></strong> are the only <strong>interchangeable</strong> attributes - either a single <strong><code>platform_variable:ioos_code</code></strong> or a combination of <strong><code>platform_variable:short_name</code></strong> with <strong><code>naming_authority</code></strong> is <strong>required</strong> to ensure that ncSOS will be able to produce the IOOS SOS Asset Identifier for the specific platform (see the <a href="https://github.com/ioos/ioos-netcdf/blob/master/docs/NetCDF-to-SOS%20Mappings_clean_2016-04-07a.xlsx">NetCDF to IOOS SOS Crosswalk</a> for details). The rest of attributes <strong><em>may not</em></strong> be substituted for one another.
+<!-- The **`platform_vocabulary`** attribute is at the moment the only pure ACDD v1.3 attribute that is included in the Profile.--></p></li>
+
+<li><p>The <a href="https://gliders.ioos.us/index.html"><strong>U.S. IOOS National Glider Data Assembly Center</strong></a> currently uses a slightly different <a href="https://github.com/ioos/ioosngdac/wiki/NGDAC-NetCDF-File-Format-Version-2">NetCDF Metadata Profile</a>; work is in progress to harmonize the NGDAC and IOOS NetCDF Profiles.</p></li>
+</ol>
+
+<h1 id="ioos-netcdf-metadata-profile-attributes:05a39d16c30fe070d4347ebd8b2f36c4">IOOS NetCDF Metadata Profile Attributes</h1>
+
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="center">Convention</th>
+<th align="left">Description</th>
+<th align="center">Type</th>
+<th align="center">Role</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">contributor_name</td>
+<td align="center">ACDD</td>
+<td align="left">The name of any individuals or institutions that contributed to the creation of this data. Combined with the <strong><code>contributor_role</code></strong>, it provides the full description of the contributor.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">contributor_role</td>
+<td align="center">ACDD</td>
+<td align="left">The role of any individuals or institutions that contributed to the creation of this data. <br>For the IOOS ncSOS, <strong><code>contributor_role = &quot;sponsor&quot;</code></strong> defines a person, group, or organization’s full or partial support of an IOOS activity, asset, model, or product.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">creator_address</td>
+<td align="center">IOOS</td>
+<td align="left">Street address of the person or organization that collected the data.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">creator_city</td>
+<td align="center">IOOS</td>
+<td align="left">City of the person or organization that collected the data.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">creator_country</td>
+<td align="center">IOOS</td>
+<td align="left">Country of the person or organization that operates a platform or network, which collected the observation data.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">creator_email</td>
+<td align="center">ACDD</td>
+<td align="left">Email address of the person or institution that collected the data.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">creator_name</td>
+<td align="center">ACDD</td>
+<td align="left">Name of the person or organization that collected the data.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">creator_phone</td>
+<td align="center">IOOS</td>
+<td align="left">The phone number of the person or group that collected the data.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">creator_sector</td>
+<td align="center">IOOS</td>
+<td align="left"><a href="http://mmisw.org/orr/#http://mmisw.org/ont/ioos/sector">IOOS classifier</a> that best describes the platform (network) operator&rsquo;s societal sector. <br><br>Example: <strong><code>creator_sector = &quot;academic&quot;</code></strong></td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">creator_state</td>
+<td align="center">IOOS</td>
+<td align="left">State of the person or organization that collected the data.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">creator_url</td>
+<td align="center">ACDD</td>
+<td align="left">The URL of the institution that collected the data.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">creator_zipcode</td>
+<td align="center">IOOS</td>
+<td align="left">ZIP code of the person or organization that collected the data.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">featureType</td>
+<td align="center">CF</td>
+<td align="left">CF attribute for identifying the featureType, e.g. featureType = &ldquo;timeSeries&rdquo;.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">geophysical_variable:_FillValue<br><br>geospatial_variable:_FillValue</td>
+<td align="center">CF</td>
+<td align="left">This value is considered to be a special value that indicates undefined or missing data, and is returned when reading values that were not written: <ul>  <li>time:_FillValue = 0.0f    <li>lat:_FillValue = 0.0f    <li>on:_FillValue = 0.0f    <li>z:_FillValue = 0.0f    <li>sea_water_temperature:_FillValue = 0.0f</ul></td>
+<td align="center">variable</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">geophysical_variable:standard_name</td>
+<td align="center">CF</td>
+<td align="left">Standardized field which uses the <a href="http://www.cfconventions.org/documents.html/">CF Standard Names</a>. If a variables does not have an existing standard_name in the CF-managed list, this attribute should not be used. In these cases, a standard name can be proposed to the CF community for consideration and acceptance.</td>
+<td align="center">variable</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">id</td>
+<td align="center">ACDD</td>
+<td align="left">An identifier for the data set, provided by and unique within its naming authority. The combination of the <strong><code>naming authority</code></strong> and the <strong><code>id</code></strong> should be globally unique, but the <strong><code>id</code></strong> can be globally unique by itself also. IDs can be URLs, URNs, DOIs, meaningful text strings, a local key, or any other unique string of characters. The <strong><code>id</code></strong> should not include blanks.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">institution</td>
+<td align="center">ACDD</td>
+<td align="left">The institution of the person or group that collected the data.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">instrument_variable:discriminant</td>
+<td align="center">IOOS</td>
+<td align="left">The value of a <strong><code>discriminant</code></strong> applies to the like-named field in the IOOS SOS Asset Identifier URN; it ensures that in case of multiple sensors measuring the same <strong><code>observedProperty</code></strong>, each sensor has a unique ID. <br><br>Examples: <ul> <li>sea_water_temperature:<strong>top</strong> <li> sea_water_temperature:<strong>bottom</strong> <li> sea_water_temperature:<strong>nortek_adp_514</strong> </ul></td>
+<td align="center">variable</td>
+<td align="center">required, if applicable</td>
+</tr>
+
+<tr>
+<td align="left">keywords</td>
+<td align="center">ACDD</td>
+<td align="left">A comma separated list of key words and phrases.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">license</td>
+<td align="center">ACDD</td>
+<td align="left">Describe the restrictions to data access and distribution.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">naming_authority</td>
+<td align="center">ACDD</td>
+<td align="left">The organization that provides the <strong><code>id</code></strong> for the dataset. <br>The naming authority should be uniquely specified by this attribute; the combination of the <strong><code>naming_authority</code></strong> and the <strong><code>id</code></strong> should be a globally unique identifier for the dataset. A reverse-DNS naming is recommended; URIs are also acceptable. <br>Example: <strong><code>edu.ucar.unidata</code></strong></td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">platform</td>
+<td align="center">ACDD</td>
+<td align="left">Name of the platform(s) that supported the sensor data used to create this data set or product. Platforms can be of any type, including satellite, ship, station, aircraft or other. The controlled vocabulary must be indicate in <strong><code>platform_vocabulary</code></strong> (see example there).<br>The value of the attribute should be set to another variable which contains the details of the platform. There can be multiple platforms involved depending on if all the instances of the featureType in the collection share the same platform or not. If multiple platforms are involved, a variable should be defined for each platform and referenced from the geophysical variable in a <b>space</b> separated string.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">platform_variable:ioos_code</td>
+<td align="center">IOOS</td>
+<td align="left">Provides IOOS asset identification similar to <strong><code>wmo_code</code></strong> and <strong><code>nodc_code</code></strong>. The attribute is a URN that should follow the &ldquo;<a href="http://ioos.github.io/conventions-for-observing-asset-identifiers/ioos_assets_wiki_upd_v0_8_draft/">IOOS Convention for Asset Identification</a>&rdquo; with a general pattern of <em><strong><code>urn:ioos:asset_type:authority:label[:discriminant]</code></strong></em>.  <br><br>Examples: <ul> <li> <strong><code>urn:ioos:glider:wmo:4801902:20160218T1913Z</code></strong> <li><strong><code>urn:ioos:station:us.glos:45024</code></strong> </ul> <br><strong>NOTE:</strong> interchangeable with <strong><code>platform_variable:short_name</code></strong></td>
+<td align="center">variable</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">platform_variable:long_name</td>
+<td align="center">NCEI Templates</td>
+<td align="left">Provide a descriptive, long name for this variable.</td>
+<td align="center">variable</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">platform_variable:short_name</td>
+<td align="center">IOOS</td>
+<td align="left">Provide a short name for the platform.  Similar to ID, a <strong><code>short_name</code></strong> can be any unique string of characters that does not include blanks. <br><br>Examples: <ul> <li> <strong><code>station_1:short_name = “carquinez”</code></strong> <li><strong><code>station_1:short_name = “cb0102</code></strong> </ul> <br><strong>NOTE:</strong> interchangeable with <strong><code>platform_variable:ioos_code</code></strong></td>
+<td align="center">variable</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">platform_variable:type</td>
+<td align="center">IOOS</td>
+<td align="left">In  conjunction with a <strong><code>platform_vocabulary</code></strong> attribute, identifies platform&rsquo;s type as defined in the <a href="https://mmisw.org/orr/#http://mmisw.org/ont/ioos/platform">IOOS Platform Categories vocabulary</a>, or <a href="http://vocab.nerc.ac.uk/collection/L06/current/">SeaVoX Platform Categories vocabulary</a>, or any other vocabulary. The URL of the actual vocabulary must be published in the <strong><code>platform_vocabulary</code></strong> global attribute. <br><br>Alternatively, the <strong><code>platform</code></strong> and <strong><code>platform_vocabulary</code></strong> pair of attributes may be used; however, this option is not recommended (see details in the <strong><code>platform_vocabulary</code></strong> description.)</td>
+<td align="center">variable</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">platform_vocabulary</td>
+<td align="center">ACDD</td>
+<td align="left">Controlled vocabulary for the names used in the &ldquo;platform&rdquo; attribute.<br><br> It is recommended that this attribute is used in conjunction with the <strong><code>platform_variable:type</code></strong> attribute. In that case, the recommended value for the <strong><code>platform_vocabulary</code></strong> attribute is a URL to either the <a href="https://mmisw.org/orr/#http://mmisw.org/ont/ioos/platform">IOOS Platform Category vocabulary</a>, or <a href="http://vocab.nerc.ac.uk/collection/L06/current/">SeaVoX Platform Categories vocabulary</a>. <br><br>Example: <strong><code>platform_vocabulary = &quot;https://mmisw.org/orr/#http://mmisw.org/ont/ioos/platform&quot;</code></strong><br><br>As an alternative (although not recommended), a NetCDF file may follow the NCEI Template v2.0, which suggests the use of &ldquo;NASA GCMD Platform Keywords Version 8.1&rdquo; string as the fixed value for the <strong><code>platform_vocabulary</code></strong>, and does not stipulate for the <strong><code>platform_variable:type</code></strong>. Instead, the actual type of the platform must be placed in the global <strong><code>platform</code></strong> attribute as described in the Science Keyword Rules (<a href="http://gcmd.nasa.gov/learn/rules.html">http://gcmd.nasa.gov/learn/rules.html</a>) for NASA Global Change Master Directory (GCMD) Keywords (<a href="http://gcmd.nasa.gov/learn/keywords.html">http://gcmd.nasa.gov/learn/keywords.html</a>). <br><br>Example: <strong><code>platform: In Situ Ocean-based Platforms &gt; MOORINGS</code></strong></td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">publisher_address</td>
+<td align="center">IOOS</td>
+<td align="left">Street address of the person or organization that distributes the data.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">publisher_city</td>
+<td align="center">IOOS</td>
+<td align="left">City of the person or organization that distributes the data.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">publisher_country</td>
+<td align="center">IOOS</td>
+<td align="left">Country of the person or organization that distributes the data.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">publisher_email</td>
+<td align="center">ACDD</td>
+<td align="left">The email address of the person or group that distributes the data files.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">publisher_name</td>
+<td align="center">ACDD</td>
+<td align="left">Name of the person or group that distributes the data files. Use the conventions described above when identifying persons and/or institutions when applicable.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">publisher_phone</td>
+<td align="center">IOOS</td>
+<td align="left">The phone number of the person or group that distributes the data files.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">publisher_state</td>
+<td align="center">IOOS</td>
+<td align="left">State of the person or organization that distributes the data.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">publisher_url</td>
+<td align="center">ACDD</td>
+<td align="left">URL of the person or group that distributes the data files.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">publisher_zipcode</td>
+<td align="center">IOOS</td>
+<td align="left">ZIP code of the person or organization that distributes the data.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">standard_name_vocabulary</td>
+<td align="center">ACDD</td>
+<td align="left">Standardized field which uses the <a href="http://www.cfconventions.org/documents.html/">CF Standard Names</a>. If a variables does not have an existing standard_name in the CF-managed list, this attribute should not be used. In these cases, a standard name can be proposed to the CF community for consideration and acceptance.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">summary</td>
+<td align="center">ACDD</td>
+<td align="left">One paragraph describing the data set.</td>
+<td align="center">global</td>
+<td align="center">recommended</td>
+</tr>
+
+<tr>
+<td align="left">title</td>
+<td align="center">ACDD</td>
+<td align="left">One sentence about the data contained within the file.</td>
+<td align="center">global</td>
+<td align="center">required</td>
+</tr>
+
+<tr>
+<td align="left">units</td>
+<td align="center">CF</td>
+<td align="left">Required for most all variables that represent dimensional quantities. The value should come from <a href="http://www.unidata.ucar.edu/software/udunits/"><strong><code>udunits</code></strong></a> authoritative vocabulary, which is documented in the CF standard name table with it&rsquo;s corresponding standard name. The <strong><code>udunits</code></strong> package includes a file <code>udunits.dat</code> which lists its supported unit names.</td>
+<td align="center">variable</td>
+<td align="center">required</td>
+</tr>
+</tbody>
+</table>
+
+<p><br></p>
+
+<!---
+
+
+
+
+
+
+
+<dl>
+<dt><b>Conventions</b>:</dt>
+<dd>
+Version of the <a href="http://cfconventions.org/">Climate and Forecast metadata conventions</a> followed by the file format specification.
+</dd>
+<dd>
+<b>Value</b>: "CF-1.6"
+</dd>
+
+-->
+
+<!--
+
+#####<i>platform</i>#####
+<dl>
+<dd>
+<table>
+<tr><th><b>Dimension</b></th><td>None</td></tr>
+<tr><th><b>Data Type</b></th><td>int</td></tr>
+<tr><th><b>Value Type</b></th><td>Scalar</td></tr>
+<tr><th><b>_FillValue</b></th><td>-999</td>
+<tr><th><b>Description</b></th><td>Variable to store meta data about the glider platform that measured the profile.  All of the attributes of this variable, with the exception of <b>comment</b> are <b>REQUIRED</b>.  This variable contains a <b>wmo_id</b> attribute to store the <b>WMO ID</b> assigned to this glider by NDBC.  The <b>WMO ID</b> is also stored as a global file attribute to allow for aggregations of all deployments from the platform with that <b>WMO ID</b>.</td></tr>
+</table>
+</dd>
+<dd>
+<a href="https://www.unidata.ucar.edu/software/netcdf/docs/netcdf/Data-Model.html">CDL</a> example with <b>REQUIRED</b> attributes and comments on values:
+<pre>
+    int platform ;
+        platform:_FillValue = -999 ;
+        platform:comment = "Slocum Glider ru29" ; # Change
+        platform:id = "ru29" ; # Change
+        platform:instrument = "instrument_ctd" ;
+        platform:long_name = "Rutgers University Slocum Glider ru29" ; # Change
+        platform:type = "platform" ;
+        platform:wmo_id = " " ; # WMO ID specific to this glider
+</pre></dd>
+</dl>
+
+-->
+
+</div>
+
+
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+
